@@ -1,0 +1,24 @@
+{
+  "name": "telegramwebhook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker-build": "docker build -t telegramwebhooknode ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^5.1.0",
+    "cross-env": "^7.0.3",
+    "debug": "^4.3.1",
+    "fs-extra": "^9.1.0",
+    "js-yaml": "^3.14.1",
+    "node-telegram-bot-api": "^0.53.0",
+    "restify": "^8.5.1",
+    "restify-clients": "^2.6.9",
+    "sequelize": "^6.6.2",
+    "sqlite3": "^5.0.2"
+  }
+}
