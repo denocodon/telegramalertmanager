@@ -1,9 +1,4 @@
-FROM node:14
-
-RUN apt-get update -y \
-    && apt-get upgrade -y \
-    && apt-get -y install curl python build-essential git ca
-     -certificates
+FROM node:14-alpine3.13
 
 ENV DEBUG="alerts:*" 
 ENV PORT="13000" 
