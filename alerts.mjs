@@ -45,6 +45,7 @@ server.post('/alerts', async (req, res, next) =>{
         for(var alert of alerts["alerts"]){
             var msg = support.parse_one_msg(alert);
             debug(msg);
+            console.log(msg);
             await bot.sendMessage(groupid,msg);
             
         }

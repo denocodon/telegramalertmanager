@@ -1,5 +1,5 @@
 FROM node:14-alpine3.13
-
+RUN apk add --no-cache python3 make
 ENV DEBUG="alerts:*" 
 ENV TELECONFIG="telegram.yaml" 
 ENV PORT=13000
