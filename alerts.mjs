@@ -8,8 +8,8 @@ import * as util from 'util';
 const debug = DBG('alerts:debug');
 const dbgerror = DBG('alerts:error');
 var server = restify.createServer({name:"Telegram-web-hook ", version: "0.0.1"});
-const groupid = "-1111111111111111111111111";
-const token = '1111111111111111111111111111111';
+const groupid = process.env.TELEGRAM_GROUP;
+const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new TeleBot(token, {polling: false});
 server.use(restify.plugins.acceptParser(server.acceptable));
 server.use(restify.plugins.queryParser());
@@ -38,7 +38,8 @@ server.post('/alerts', async (req, res, next) =>{
     // debug(msg);
     // await bot.sendMessage(groupid,msg);
     // res.send(msg);
-    
+    debug(groupid);
+    debug(token);
     var alerts = req.body;
     try {
         for(var alert of alerts["alerts"]){
