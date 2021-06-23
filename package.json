@@ -17,8 +17,6 @@
     "js-yaml": "^3.14.1",
     "node-telegram-bot-api": "^0.53.0",
     "restify": "^8.5.1",
-    "restify-clients": "^2.6.9",
-    "sequelize": "^6.6.2",
-    "sqlite3": "^5.0.2"
+    "restify-clients": "^2.6.9"
   }
 }
