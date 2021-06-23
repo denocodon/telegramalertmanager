@@ -17,7 +17,7 @@ server.use(restify.plugins.bodyParser());
 
 server.use(restify.plugins.queryParser());
 server.use(restify.plugins.bodyParser({mapParams: true}));
-server.listen(process.env.PORT, "localhost", function(){
+server.listen(process.env.PORT ? process.env.PORT : 13000, "localhost", function(){
     console.log(process.env.DEBUG + "moa");
     debug(server.name + 'listening at ' + server.url);
     
